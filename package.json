@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@okta/okta-angular": "6.1",
+    "@okta/okta-auth-js": "7.2"
+  }
+}
