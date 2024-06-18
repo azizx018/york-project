@@ -1,0 +1,96 @@
+
+<app-header></app-header>
+
+<mat-card>
+    <form class="form" [formGroup]="patientForm" (ngSubmit)="onSubmit()">
+        <div class="content-box">
+    
+            <h2>
+                {{ pageType }}
+                Patient Information
+            </h2>
+            <div class="field">
+                <mat-label class="label">*Patient Name {{patientForm.get('name')?.value}}</mat-label>
+                <input type="text"  class="input" formControlName="name" placeholder="full patient name" />
+                <div class="invalid" *ngIf="patientForm.controls['name'].invalid && (isFormSubmitted || patientForm.controls['name'].touched ||patientForm.controls['name'].dirty)">
+                    <span *ngIf="patientForm.controls['name'].errors?.['required']">Name is required</span>
+    
+                </div>
+            </div>
+    
+    
+           <div class="field">
+                <mat-label>*Date Of Birth</mat-label>
+                <input type="date" formControlName="dateOfBirth" />
+                <div class="invalid" *ngIf="patientForm.controls['dateOfBirth'].invalid && (isFormSubmitted || patientForm.controls['dateOfBirth'].touched ||patientForm.controls['dateOfBirth'].dirty)">
+                    <span *ngIf="patientForm.controls['dateOfBirth'].errors?.['required']">DOB is required</span>
+                </div>
+    
+            </div> 
+    
+            <div class="field">
+                <mat-label>*Phone Number</mat-label>
+                <input type="tel" formControlName="contactInfo" placeholder="XXX-XXX-XXXX" mask="(000) 000 0000"/>
+                <div class="invalid" *ngIf="patientForm.controls['contactInfo'].invalid && (isFormSubmitted || patientForm.controls['contactInfo'].touched ||patientForm.controls['contactInfo'].dirty)">
+                    <span *ngIf="patientForm.controls['contactInfo'].errors?.['required']">
+                        <p>Phone is required</p>
+                    </span>
+    
+                </div>
+                
+            </div> 
+            
+    
+            <div class="select">
+                <mat-label>*Select Referral Reason:</mat-label>
+                <mat-select formControlName="referralReason">Choose Reason 
+                    <mat-option selected disabled value="" >Select a Referral Reason</mat-option>
+                    <mat-option value="Certain Death" >Certain Death</mat-option>
+                    <mat-option value="Second Opinion" >Second Opinion</mat-option>
+                    <mat-option value="Other">Other</mat-option>
+                </mat-select>
+                <div *ngIf="showReferralReasonOther">
+                    <textarea  matInput formControlName="referralReasonOther"></textarea>
+                </div>
+                <div class="invalid" *ngIf="patientForm.controls['referralReason'].invalid && (isFormSubmitted || patientForm.controls['referralReason'].touched ||patientForm.controls['referralReason'].dirty)">
+                    <span *ngIf="patientForm.controls['referralReason'].errors?.['required']">Reason required</span>
+    
+                </div>
+    
+            </div>
+    
+            <div class="select">
+                <mat-label>*Select Referral Status:</mat-label>
+                <mat-select formControlName="referralStatus">Choose Reason
+                    <mat-option selected disabled value="" >Select a Referral Status</mat-option>
+                    <mat-option value="Accepted">Accepted</mat-option>
+                    <mat-option value="Declined" >Declined</mat-option>
+                    <mat-option value="Pending">Pending</mat-option>
+                </mat-select>
+                <div class="invalid" *ngIf="patientForm.controls['referralStatus'].invalid && (isFormSubmitted || patientForm.controls['referralStatus'].touched ||patientForm.controls['referralStatus'].dirty)">
+                    <span *ngIf="patientForm.controls['referralStatus'].errors?.['required']">Status required</span>
+    
+                </div>
+    
+    
+            </div>
+            
+            <div class="field">
+                <mat-label class="label">Patient Notes</mat-label>
+                <textarea matInput type="text" formControlName="noteText" placeholder="Add note here"></textarea>
+            
+            </div>
+    
+            <div>
+                <button mat-raised-button type="submit" >{{buttonText}}</button>
+            </div>
+            <p>* indicates a required field</p>
+        </div>
+    
+    </form>
+
+</mat-card>
+
+
+
+

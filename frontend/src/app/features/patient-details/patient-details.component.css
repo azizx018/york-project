@@ -1,0 +1,30 @@
+.content-box{
+    margin: 20px;
+    padding: 10px;
+}
+mat-card{
+    margin: 20px;
+}
+
+button{
+    margin: 10px;
+    
+}
+mat-card-title {
+    font-size:xx-large;
+    color: whitesmoke;
+    margin: 20px;
+    padding-bottom: 10px;
+}
+mat-card-content {
+    color:white
+}
+mat-card-subtitle {
+    margin: 15px;
+    border-color: white;
+    
+}
+p{
+    margin: 15px;
+    align-items:flex-start;
+}

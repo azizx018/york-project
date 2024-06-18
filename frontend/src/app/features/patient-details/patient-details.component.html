@@ -1,0 +1,45 @@
+
+<app-header></app-header>
+<div class="content-box">
+    <mat-card>
+        <mat-card-header>
+          <mat-card-title>Patient Name: {{patient.name}}</mat-card-title>
+          
+        </mat-card-header>
+        <mat-card-subtitle>Patient DOB: {{patient.dateOfBirth}}</mat-card-subtitle>
+          <mat-card-subtitle>Contact Info: {{patient.contactInfo}}</mat-card-subtitle>
+          <mat-card-subtitle>Referral Reason: {{patient.referralReason}}</mat-card-subtitle>
+          <mat-card-subtitle>Referral Status: {{patient.referralStatus}}</mat-card-subtitle>
+          <mat-card-subtitle>Created: {{patient.createdAt}}</mat-card-subtitle>
+          <mat-card-subtitle>Updated: {{patient.updatedAt}}</mat-card-subtitle>
+          <mat-card-footer>
+          </mat-card-footer>
+
+      <br>
+    </mat-card>
+    <a routerLink="/patient/{{patient.id}}/edit">
+      <button mat-raised-button>Edit Patient</button>
+    </a>
+
+      <app-dialog [patient]="patient"></app-dialog>
+ 
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Patient Notes</mat-card-title>
+        </mat-card-header>
+          <mat-card-content>
+          <mat-card-content *ngFor="let note of patient.notes">
+           
+             <p>{{note.createdDate}} -</p> 
+             <p>{{note.content}}</p> 
+                    
+          </mat-card-content>
+        </mat-card-content>  
+
+        
+      </mat-card>
+      
+       
+
+      
+</div>

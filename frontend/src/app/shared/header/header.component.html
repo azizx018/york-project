@@ -1,0 +1,15 @@
+<mat-toolbar>
+    <a routerLink="/dashboard" [routerLinkActive]="['active']">
+        <button mat-raised-button color="accent">
+          Patients
+        </button>
+      </a>
+    <span class="example-spacer"></span>
+    <a routerLink="/patient" [routerLinkActive]="['active']">
+      <button mat-raised-button color="accent">
+        Add New Patient
+      </button>
+    </a>
+   
+    <button (click)="signOut()" mat-flat-button>Log Out</button>
+</mat-toolbar>

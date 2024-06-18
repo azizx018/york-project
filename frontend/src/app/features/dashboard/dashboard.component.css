@@ -1,0 +1,11 @@
+button {
+    margin: 10px;
+}
+
+.chips {
+   align-items: center;
+    margin: 10px;
+}
+.invalid {
+    border: 1px solid red;
+  }

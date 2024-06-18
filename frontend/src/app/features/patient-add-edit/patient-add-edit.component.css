@@ -1,0 +1,75 @@
+.form {
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: rgba(3, 3, 3, 0.1) 10px 0px 50px;
+  }
+  
+  .field {
+    margin-bottom: 30px;
+  }
+  label, mat-label {
+    display: block;
+    margin: 20px 0 0 0;
+  }
+  .label {
+    margin: 10px 0 0 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #777;
+  }
+  
+  .input {
+    width: 70%;
+    padding: 25px 15px;
+    border: 0;
+    background: #f0f0f0;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #555;
+    font-weight: 600;
+  }
+
+  textarea {
+    width: 70%;
+    padding: 25px 15px;
+    border: 0;
+    background: #f0f0f0;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #555;
+    font-weight: 600;
+  }
+  
+  .button {
+    background: #f303b3;
+    color: #fff;
+    font-weight: 600;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 25px 15px;
+    border: 0;
+    font-size: 18px;
+    &:hover {
+      background-color: #0271da;
+    }
+  }
+  
+  .invalid {
+    
+    color: red;
+  }
+  
+  .error {
+    color: red;
+  }
+  mat-card {
+    margin: 20px;
+    align-items: center;
+  }
+  mat-select{
+    color: #555;
+  }

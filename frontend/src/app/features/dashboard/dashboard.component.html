@@ -1,0 +1,18 @@
+
+<div>
+    <app-header></app-header>
+    <div class="content-box" *ngFor="let patient of patients">
+        <h3>{{patient.name}}</h3>
+        <a routerLink="/patient/{{patient.id}}">
+            <button mat-raised-button color="accent">Patient Details</button>
+        </a>
+
+        <div class="chips">
+          <mat-chip-set aria-label="status">
+            <mat-chip>{{patient.referralStatus}}</mat-chip>
+          </mat-chip-set>
+        </div>
+
+        <router-outlet></router-outlet>
+    </div>
+</div>
