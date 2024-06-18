@@ -1,0 +1,36 @@
+{
+  "patients": {
+    "patient": [
+      {
+        "id": "1",
+        "name": "Tony Stark",
+        "dateOfBirth": "1892-01-12",
+        "contactInfo": "123-896-7526",
+        "reasonForReferral": "illness",
+        "referralStatus": "in progress",
+        "createdAt": "2024-02-23",
+        "updatedAt": "2024-03-28"
+      },
+      {
+        "id": "2",
+        "name": "Bruce Banner",
+        "dateOfBirth": "1968-10-13",
+        "contactInfo": "789-965-2154",
+        "reasonForReferral": "Gamma radiation exposure",
+        "referralStatus": "in progress",
+        "createdAt": "2022-06-09",
+        "updatedAt": "2023-12-28"
+      },
+      {
+        "id": "3",
+        "name": "Luke Skywalker",
+        "dateOfBirth": "1965-12-06",
+        "contactInfo": "789-333-9687",
+        "reasonForReferral": "Went to the dark side",
+        "referralStatus": "complete",
+        "createdAt": "2021-04-09",
+        "updatedAt": "2023-11-28"
+      }
+    ]
+  }
+}
